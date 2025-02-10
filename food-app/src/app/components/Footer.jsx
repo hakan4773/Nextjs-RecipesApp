@@ -1,11 +1,13 @@
 import Link from "next/link";
 import React from "react";
-import food from "../../../public/food.jpg"
-import Image from "next/image";
+
 const Footer = () => {
+
+
+
   return (
     <>
-    <div className="flex lg:flex-row flex-wrap bg-black text-white border-t p-4 gap-10 font-serif   " >
+    <div className="flex lg:flex-row flex-wrap bg-black text-white border-t p-4 gap-10   " >
       <div className="flex flex-col p-2 mx-6">
         <h1 className="flex  text-xl underline font-bold">Links</h1>
         <ul className="text-gray-400 flex flex-col text-lg ">
@@ -19,7 +21,7 @@ const Footer = () => {
       <div className="flex flex-col p-2 mx-6">
         <h1 className="flex text-xl underline font-bold">Cuisine</h1>
         <ul className="text-gray-400 flex flex-col text-lg">
-          <Link href={"/"}>İtalian</Link>
+          <Link href={"/foods/Italian"}>İtalian</Link>
           <Link href={"/About"}>American</Link>
           <Link href={"/foods"}>Turkish</Link>
           <Link href={"/Contact"}>Thai</Link>
@@ -31,26 +33,27 @@ const Footer = () => {
       <div className="flex flex-col p-2 mx-6">
         <h1 className="flex text-xl underline font-bold">Meal</h1>
         <ul className="text-gray-400 flex flex-col text-lg">
-          <Link href={"/"}>Breakfast</Link>
-          <Link href={"/About"}>Lunch</Link>
-          <Link href={"/foods"}>Dinner</Link>
-          <Link href={"/Contact"}>Snack</Link>
-          <Link href={"/Contact"}>Drinks</Link>
-          <Link href={"/Contact"}>Appetizer</Link>
+          <Link href={"/foods/meal-type/breakfast"}>Breakfast</Link>
+          <Link href={"/foods/meal-type/lunch"}>Lunch</Link>
+          <Link href={"/foods/meal-type/dinner"}>Dinner</Link>
+          <Link href={"/foods/meal-type/snack"}>Snack</Link>
+          <Link href={"/foods/meal-type/beverage"}>Drinks</Link>
+          <Link href={"/foods/meal-type/appetizer"}>Appetizer</Link>
 
         </ul>
       </div>
 
-      <div className="lg:w-1/2 w-full  flex lg:flex-row flex-col mx-auto ">
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-      </p> <Image src={food} width={300}  height={50} className="lg:w-[300px] w-full h-full" alt="food"></Image>
+      <div className=" w-[400px]  lg:mx-2 mx-4  flex lg:flex-row flex-col "> 
+      <p >Lezzet dolu bir yolculuğa çıkmaya hazır mısınız? Yemek tarifleri sayfamızda, evinizin konforunda hazırlayabileceğiniz birbirinden lezzetli ve pratik tarifler sizleri bekliyor. Kahvaltıdan akşam yemeğine, tatlılardan atıştırmalıklara kadar her damak zevkine uygun seçeneklerle mutfağınıza renk katın. İster yeni başlayan ister deneyimli bir aşçı olun, adım adım anlatımlarla yemek yapmak artık çok daha keyifli! Hadi, mutfağa girin ve yaratıcılığınızı konuşturun!
+      
+      </p></div>
+      <div className="flex justify-center items-center">
+      <h1 className="mx-6 text-6xl" >
+      𝕽𝖊𝖈𝖎𝖕𝖊𝖘 𝕱𝖔𝖔𝖉 
 
+      </h1>
+      </div>
 
-    
-     </div>
-
-
-     
 
     </div>
     <div className=" flex justify-center text-white bg-gray-800 ">

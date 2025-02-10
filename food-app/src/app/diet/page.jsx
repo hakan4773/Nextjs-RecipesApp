@@ -233,8 +233,7 @@ function valuetext(value) {
         min={0}
         max={50}
         disabled
-        value={bmi}
-        defaultValue={50}
+        value={bmi ? bmi:100}
         getAriaValueText={valuetext}
         sx={{
           height: 8,
