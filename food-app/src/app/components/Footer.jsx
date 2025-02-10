@@ -48,7 +48,7 @@ const Footer = () => {
       
       </p></div>
       <div className="flex justify-center items-center">
-      <h1 className="mx-6 text-6xl" >
+      <h1 className="mx-4 text-5xl" >
       𝕽𝖊𝖈𝖎𝖕𝖊𝖘 𝕱𝖔𝖔𝖉 
 
       </h1>

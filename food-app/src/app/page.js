@@ -19,8 +19,8 @@ export default function Home() {
 
 
 
-<div  className="absolute  flex  flex-col top-1/3 left-1/3 w-80  justify-center    items-center text-center">
-<Link href="/foods"  className=" border p-1 rounded-md text-white   hover:text-4xl shadow-2xl text-4xl text-bold">Hemen Yolculuğa Başlayın</Link>
+<div  className="absolute  flex   flex-col lg:top-1/3 lg:left-1/3 top-1/2    text-center ">
+<Link href="/foods"  className="w-40 lg:w-80 lg:mx-2 mx-6  border p-1 rounded-md text-white   hover:text-4xl shadow-2xl lg:text-4xl text-xl text-bold">Hemen Yolculuğa Başlayın</Link>
 </div>
 </div>
 <Contents />
