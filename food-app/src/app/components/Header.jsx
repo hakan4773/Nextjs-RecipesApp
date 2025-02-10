@@ -3,12 +3,14 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { Menu, MenuItem } from '@mui/material'
 import { useRouter } from 'next/navigation'
+import { useSelectedLayoutSegment } from 'next/navigation'
 
 
-
-const Header = () => {
+const Header = ({children}) => {
 
   const router=useRouter();
+  const activeSegment = useSelectedLayoutSegment();
+
 const [anchorEl, setAnchorEl] = useState(null);
 const open=Boolean(anchorEl)
 const handleClick=(e)=>{
@@ -40,16 +42,15 @@ const handleClose = () => {
     }
   ]
 
-
   return (
     <div className='flex flex-col  lg:h-20 h-32 p-2 bg-black w-full'>
         
 
 <ul className='text-white flex justify-center items-center text-xl text-center gap-6 w-full border-b'>
-<Link href={"/"}  >Home</Link>
-<Link href={"/About"} >About</Link>
-<Link href={"/foods"} >Foods</Link>
-<Link href={"/Contact"} >Contact</Link>
+<NavLink href={"/"} segment="" activeSegment={activeSegment} >Home</NavLink>
+<NavLink href={"/About"}  segment="About" activeSegment={activeSegment} >About</NavLink>
+<NavLink href={"/foods"} segment="foods" activeSegment={activeSegment}>Foods</NavLink>
+<NavLink href={"/Contact"} segment="Contact" activeSegment={activeSegment}>Contact</NavLink>
 </ul>
 
 
@@ -64,7 +65,7 @@ const handleClose = () => {
           ))}
 </Menu>
 <Link href={"/foods"}>World Recipes</Link>
-<Link href={"seasonal"}>Seasonal</Link>
+{/* <Link href={"seasonal"}>Seasonal</Link> */}
 <Link href={"/diet"}>Diet</Link>
 <Link href={"for-kids"}>For Kids </Link>
 <Link href={"/foods/meal-type/beverage"}>Drinks </Link>
@@ -78,5 +79,18 @@ const handleClose = () => {
     </div>
   )
 }
+function NavLink({href,segment,activeSegment,children}){
+  const isActive=activeSegment===segment;
+  return (
+    <Link
+      href={href}
+      className={`${
+        isActive ? "border-b-4 border-blue-500  font-bold" : "hover:text-blue-500"
+      }`}
+     
+    > {children}
+    </Link>
+  );
 
+}
 export default Header

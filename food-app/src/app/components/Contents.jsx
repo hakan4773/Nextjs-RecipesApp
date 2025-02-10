@@ -47,7 +47,7 @@ const Contents = () => {
 
 Unutmayın, diyet yapmak sadece fiziksel değil, zihinsel sağlığınızı da destekler. Sağlıklı beslenerek hem bedeninizi hem de ruhunuzu mutlu edin! 😊
 
-<Link href={"/foods"} className="mx-2 p-1 bg-none rounded-full border">  <ArrowForwardIcon ></ArrowForwardIcon></Link>
+<Link href={"/diet"} className="mx-2 p-1 bg-none rounded-full border">  <ArrowForwardIcon ></ArrowForwardIcon></Link>
 
           </p>
         </Stack>
