@@ -61,13 +61,13 @@ const Page = () => {
               alt="recipe"
               className="rounded-md p-2 lg:w-[300px] w-[500px] lg:h-[200px] h-[300px]"
             />        
-            <div className=" flex lg:flex-col flex-row">
+            <div className=" flex lg:flex-col flex-row space-y-2 lg:w-auto w-full ">
              
               <p className="font-sans m-2">
                 <b>Cousinie: </b>
                 {fd.cuisine} <TourIcon />
               </p>
-              <p className="font-sans m-2">
+              <p className="font-sans m-2 ">
                 <b>Meal Type: </b>
                 {fd.mealType+" "}
               </p>
@@ -75,8 +75,8 @@ const Page = () => {
                 <b>Prep Time Minutes: </b>
                 {fd.prepTimeMinutes} minute <AlarmIcon />
               </p>
-              <p className="font-sans m-2">
-                <b>CookTimeMinutes: </b>
+              <p className="font-sans ">
+                <b>Cook Time Minutes: </b>
                 {fd.cookTimeMinutes} minute <AlarmIcon />
               </p>
             </div>
@@ -97,7 +97,7 @@ const Page = () => {
                   precision={0.5}
                 />
               </p>
-              <p className="font-sans m-2">
+              <p className="font-sans ">
                 <b>Calories Per Serving: </b>
                 {fd.caloriesPerServing} Kcal
               </p>
