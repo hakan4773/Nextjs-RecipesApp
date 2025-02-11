@@ -18,14 +18,14 @@ const page = () => {
     fetchdata();
   }, []);
   return (
-    <div className="font-serif w-full flex flex-col justify-center items-center relative px-40 text-xl ">
+    <div className="font-serif w-full flex flex-col justify-center items-center relative lg:px-40 px-2 text-xl ">
      <h1 className="flex justify-center text-3xl p-4 font-bold">{food.name}</h1>  
-     <img src={food.image} alt="recipe" className="h-[60vh] w-full " />
-
+     <img src={food.image} alt="recipe" className="lg:h-[60vh] h-[40vh] lg:w-full w-[500px] " />
+ 
       <div className="flex flex-col w-full  ">
        
-        <div className=" flex    bg-teal-400">
-          <p className="font-sans m-2">
+        <div className=" bg-teal-400 flex lg:flex-row flex-wrap lg:w-auto w-full">
+          <p className="font-sans m-2 ">
             <b>Cousinie: </b>
             {food.cuisine} <TourIcon />
           </p>
@@ -34,11 +34,11 @@ const page = () => {
             {food.mealType}
           </p>
           <p className="font-sans m-2">
-            <b>Prep Time Minutes: </b>
+            <b>Prep Time : </b>
             {food.prepTimeMinutes} minute <AlarmIcon />
           </p>
           <p className="font-sans m-2">
-            <b>CookTimeMinutes: </b>
+            <b>Cook Time: </b>
             {food.cookTimeMinutes} minute <AlarmIcon />
           </p>
 
