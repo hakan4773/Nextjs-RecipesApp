@@ -53,7 +53,8 @@ const Page = () => {
         <div key={fd.id} className="w-full "> <h2 className="m-2 font-sans">
                 <b>{fd.name}</b>
               </h2>
-          <div className=" flex lg:flex-row flex-col">
+
+          <div className=" flex lg:flex-row flex-col ">
             
               <img
               src={fd.image}
@@ -102,13 +103,17 @@ const Page = () => {
               </p>
 
             </div>
-
-            <div className="mx-auto space-y-6 flex flex-col ">
-            <Button variant="contained" color="primary" sx={{width:{xs  :500,md:350}}}   onClick={()=>router.push(`/foods/${fd?.id}`)}>More</Button>
+      <div className="lg:mx-auto  space-y-6 flex flex-col">
+            <Button variant="contained" color="primary" sx={{width:{xs  :"100%",md:350}}} 
+              onClick={()=>router.push(`/foods/${fd?.id}`)}>More</Button>
               <ReviewComponents />
             </div>
 
-          </div>
+          </div>  
+
+    
+
+<div>
           <Accordion 
             expanded={expanded === `panel1-${fd.id}`}
             onChange={handleChange(`panel1-${fd.id}`)}
@@ -128,7 +133,7 @@ const Page = () => {
               </AccordionDetails>
             ))}
           </Accordion>
-
+ 
           <Accordion 
             expanded={expanded === `panel2-${fd.id}`}
             onChange={handleChange(`panel2-${fd.id}`)}
@@ -149,6 +154,10 @@ const Page = () => {
               </AccordionDetails>
             ))}
           </Accordion>
+</div>
+
+          
+
         </div>
       ))}
     </div>
