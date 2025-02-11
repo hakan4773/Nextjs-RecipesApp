@@ -72,11 +72,11 @@ const Page = () => {
                 {fd.mealType+" "}
               </p>
               <p className="font-sans m-2">
-                <b>Prep Time Minutes: </b>
+                <b>Prep Time: </b>
                 {fd.prepTimeMinutes} minute <AlarmIcon />
               </p>
               <p className="font-sans ">
-                <b>Cook Time Minutes: </b>
+                <b>Cook Time </b>
                 {fd.cookTimeMinutes} minute <AlarmIcon />
               </p>
             </div>
