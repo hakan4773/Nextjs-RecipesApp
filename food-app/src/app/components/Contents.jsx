@@ -13,11 +13,11 @@ const Contents = () => {
         <h1 className="text-3xl ">CONTENTS</h1>
       </div>
 
-      <Stack direction="column" sx={{mt:4}} >
-        <Stack direction="row" sx={{mx:2}}>
+      <Stack direction="column" sx={{mt:4}} spacing={4} >
+        <Stack direction="row" sx={{mx:2}} >
           <Image src={recipe} 
         
-            alt="recipe" className="rounded-md p-2 lg:h-64 lg:w-1/2  h-64" />
+            alt="recipe" className="rounded-md p-2 lg:h-64 lg:w-1/2 w-44  h-64" />
           <p className="lg:text-xl text-sm w-full"><span className="font-bold lg:text-2xl text-sm mx-2 ">
             1- Yemek Tarifleriyle Lezzetli Anlar</span><br></br>
            Pratik Tarifler: Günlük hayatın koşuşturmasında hızlı ama
@@ -28,14 +28,13 @@ const Contents = () => {
             ve paylaşmanın keyfini çıkarın. Her yemek, sevdiklerinizle
             geçirdiğiniz anları tatlandırır. Şimdi, en sevdiğiniz tarifi seçin
             ve mutfağın büyülü dünyasına dalın! Yemek Tariflerine Göz atmayı Unutmayın.😊
-            <br></br>
         <Link href={"/foods"} className="mx-2  p-1 bg-none rounded-full border">  <ArrowForwardIcon ></ArrowForwardIcon></Link>
           </p>
 
         </Stack>
 
         <Stack direction="row" sx={{mx:2}}>
-          <Image src={diet}  alt="recipe" className="rounded-md p-2 lg:h-64 lg:w-1/2  h-64" />
+          <Image src={diet}  alt="recipe" className="rounded-md p-2 lg:h-64 lg:w-1/2 w-44  h-64" />
           <p className="lg:text-xl text-sm w-full"><span className="font-bold lg:text-2xl text-sm mx-2 ">2- Diyet Yaparken Sağlıklı ve Dengeli Beslenme
           </span>   <br></br>
           Diyet yapmak, yalnızca kilo vermek değil, sağlıklı bir yaşam tarzı benimsemek için harika bir adımdır. Doğru bir diyet programıyla hem kendinizi enerjik hissedebilir hem de vücudunuzun ihtiyaç duyduğu besinleri alabilirsiniz.
@@ -47,7 +46,7 @@ const Contents = () => {
           </p>
         </Stack>
         <Stack direction="row" sx={{mx:2}}>
-          <Image src={meal} alt="recipe" className="rounded-md p-2 lg:h-64 lg:w-1/2  h-64" />
+          <Image src={meal} alt="recipe" className="rounded-md p-2 lg:h-64 lg:w-1/2 w-44  h-64" />
           <p className="lg:text-xl text-sm w-full"><span className="font-bold lg:text-2xl text-sm mx-2 ">3- Öğünler ve Doğru Beslenme
          
           </span>   <br></br>
@@ -68,7 +67,7 @@ const Contents = () => {
         </Stack>
 
         <Stack direction="row" sx={{mx:2}}>
-          <Image src={diet}  alt="recipe" className="rounded-md p-2 lg:h-64 lg:w-1/2  h-64" />
+          <Image src={diet}  alt="recipe" className="rounded-md p-2 lg:h-64 lg:w-1/2 w-44  h-64" />
           <p className="lg:text-xl text-sm w-full"><span className="font-bold lg:text-2xl text-sm mx-2 ">4- Dünya Mutfakları: Kültürlerin Lezzet Yolculuğu
 
          
@@ -77,7 +76,7 @@ const Contents = () => {
           İşte dünyanın en sevilen mutfaklarından bazıları ve öne çıkan lezzetleri:
           İtalyan mutfağı,Türk mutfağı,Meksika mutfağı,Asya mutfağı,Orta Doğu Mutfağı
           Dünya mutfakları, insanların kültürlerini keşfetmenin en lezzetli yollarından biridir. Yeni tarifler deneyerek ya da bu mutfaklara özgü restoranları ziyaret ederek, dünyanın dört bir yanını tabaklarınızda keşfetmeye ne dersiniz? 🌍🍴
-          <br></br> <Link href={"/foods"} className="mx-2 p-1 bg-none rounded-full border">  <ArrowForwardIcon ></ArrowForwardIcon></Link>
+          <Link href={"/foods"} className="mx-2 p-1 bg-none rounded-full border">  <ArrowForwardIcon ></ArrowForwardIcon></Link>
 
           </p>
         </Stack>

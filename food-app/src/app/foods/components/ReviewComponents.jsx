@@ -34,7 +34,7 @@ const HandleClose=()=>{
 }
   return (
     <div >
-      <Button variant="outlined" sx={{width:{xs:500,md:350},marginBottom:{xs:2}}}  onClick={HandleOpen}>
+      <Button variant="outlined" sx={{width:{xs:"100%",md:350},marginBottom:{xs:2}}}  onClick={HandleOpen}>
    Read a comments
 
       </Button>
