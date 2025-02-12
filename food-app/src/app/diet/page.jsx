@@ -72,7 +72,7 @@ function valuetext(value) {
 }
  
   return (
-    <div className="min-w-[400px] font-sans bg-slate-100 p-24 text-lg">
+    <div className="min-w-[400px] font-sans bg-slate-100 lg:p-24 p-2 text-lg">
         <Image src={diet} alt='diet' className='w-full h-72' width={700} height={100}></Image>
      
       <h1 className="text-3xl p-2 font-bold text-blue-900">Diyet Nedir?</h1>
@@ -114,10 +114,10 @@ function valuetext(value) {
         Diyet, sağlık profesyonelleri veya diyetisyenler tarafından kişiye özel
         hazırlanmalıdır.
         <b>Denge ve Çeşitlilik:</b> Vücudun ihtiyaç duyduğu tüm besin gruplarını
-        içeren dengeli bir plan izlenmelidir.
+        içeren dengeli bir plan izlenmelidir.<br></br>
         <b>Sürdürülebilirlik:</b> Kısa süreli, aşırı kısıtlayıcı diyetler yerine
-        uzun vadede uygulanabilir bir beslenme tarzı tercih edilmelidir.
-        Fiziksel Aktivite: Diyet, düzenli egzersizle desteklenmelidir. Diyetin
+        uzun vadede uygulanabilir bir beslenme tarzı tercih edilmelidir.<br></br>
+        <b>Fiziksel Aktivite:</b> Diyet, düzenli egzersizle desteklenmelidir. Diyetin
         Faydaları Sağlıklı bir kiloya ulaşmaya yardımcı olur. Kronik
         hastalıkların (diyabet, kalp hastalıkları, obezite) önlenmesini
         destekler. Enerji seviyelerini artırır ve günlük performansı
@@ -150,18 +150,18 @@ function valuetext(value) {
         <div className="w-full bg-blue-500 text-white p-3 text-xl font-bold rounded-sm ">
           Vücut Kitle Endeksi Hesaplama Aracı
         </div>
-<div className="flex  bg-white w-full gap-8">
+<div className="lg:flex  bg-white w-full gap-8 ">
         <div className="flex  flex-col p-4 ">
 
 
-          <div className=" space-x-16   flex  ">
+          <div className=" lg:space-x-16 space-x-8   flex  ">
             <label className="font-bold  ">Boyunuz</label>
             <div>
-              <input type="number" min={1} className="text-xl font-bold border rounded-md p-2 w-28 mx-12" value={height} onChange={(e)=>setHeight(e.target.value)}></input>
+              <input type="number" min={1} className="text-xl font-bold border rounded-md p-2 lg:w-28 w-20 mx-12" value={height} onChange={(e)=>setHeight(e.target.value)}></input>
               <span className=" font-bold">cm</span>
             </div>
           </div>
-          <div className="w-[400px] pt-6">
+          <div className="lg:w-[400px] w-[350px] pt-6">
             <Slider
             value={height}
             onChange={(e)=>setHeight(e.target.value)}
@@ -171,7 +171,7 @@ function valuetext(value) {
               valueLabelDisplay="auto"
             />
           </div>
-          <div className=" space-x-16   flex  ">
+          <div className=" lg:space-x-16  space-x-8  flex  ">
             <label className="font-bold  ">Kilonuz</label>
             <div>
               <input type="number" min={1} max={300} value={weight} onChange={(e)=>setWeight(e.target.value)}
@@ -179,7 +179,7 @@ function valuetext(value) {
               <span className=" font-bold">kg</span>
             </div>
           </div>
-          <div className="w-[400px] pt-6 ">
+          <div className="lg:w-[400px] w-[350px]  pt-6 ">
             <Slider
               value={weight}
               max={300}
@@ -199,7 +199,7 @@ function valuetext(value) {
 <div className="flex">
               <label className="font-bold  ">Cinsiyetiniz</label>
               
-              <Select className="text-xl font-bold border rounded-md mx-2 w-32"
+              <Select className="text-xl font-bold border rounded-md mx-2 lg:w-32 w-24"
               value={gender} onChange={(e)=>setGender(e.target.value)}
               >
                 <MenuItem value="Male"> Male
@@ -225,7 +225,7 @@ function valuetext(value) {
        
 
 
-     <div style={{ width: 500, margin: "20px auto" }}>
+     <div style={{ margin: "20px auto" }}  className="lg:w-[500px] w-[400px] ">
       <Slider
         aria-label="Custom marks"
         marks={marks}
