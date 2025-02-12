@@ -72,7 +72,7 @@ function valuetext(value) {
 }
  
   return (
-    <div className="min-w-[400px] font-sans bg-slate-100 lg:p-24 p-2 text-lg">
+    <div className="min-w-[400px] font-sans bg-slate-100 lg:p-24 p-1 text-lg">
         <Image src={diet} alt='diet' className='w-full h-72' width={700} height={100}></Image>
      
       <h1 className="text-3xl p-2 font-bold text-blue-900">Diyet Nedir?</h1>
@@ -220,12 +220,12 @@ function valuetext(value) {
         
         </div>
 
-        <div className="p-4 w-1/2">
+        <div className="p-4 lg:w-1/2 w-full">
       <h1 className="font-bold font-sans">Vücut Kitle İndeksiniz:</h1>  
        
 
 
-     <div style={{ margin: "20px auto" }}  className="lg:w-[500px] w-[400px] ">
+     <div style={{ margin: "20px auto" }}  className="lg:w-[500px] w-[350px] ">
       <Slider
         aria-label="Custom marks"
         marks={marks}
@@ -264,7 +264,7 @@ function valuetext(value) {
       </div> 
 
 
-<div className="">{message}</div>
+<div >{message}</div>
 
  <div className="flex justify-center">{message && <Button onClick={()=>router.push("/foods")} sx={{marginTop:2,opacity:75}} variant="contained"  color="error">Size uygun diyete başlayın</Button>}</div>
         </div>
