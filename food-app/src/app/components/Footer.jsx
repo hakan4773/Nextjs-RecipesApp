@@ -8,6 +8,7 @@ const Footer = () => {
   return (
     <>
     <div className="flex lg:flex-row flex-wrap bg-black text-white border-t p-4 gap-10   " >
+    <div className="flex">
       <div className="flex flex-col p-2 mx-6">
         <h1 className="flex  text-xl underline font-bold">Links</h1>
         <ul className="text-gray-400 flex flex-col text-lg ">
@@ -42,7 +43,7 @@ const Footer = () => {
 
         </ul>
       </div>
-
+</div>
       <div className=" w-[400px]  lg:mx-2 mx-4  flex lg:flex-row flex-col "> 
       <p >Lezzet dolu bir yolculuğa çıkmaya hazır mısınız? Yemek tarifleri sayfamızda, evinizin konforunda hazırlayabileceğiniz birbirinden lezzetli ve pratik tarifler sizleri bekliyor. Kahvaltıdan akşam yemeğine, tatlılardan atıştırmalıklara kadar her damak zevkine uygun seçeneklerle mutfağınıza renk katın. İster yeni başlayan ister deneyimli bir aşçı olun, adım adım anlatımlarla yemek yapmak artık çok daha keyifli! Hadi, mutfağa girin ve yaratıcılığınızı konuşturun!
       
