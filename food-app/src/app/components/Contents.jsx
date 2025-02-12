@@ -8,7 +8,7 @@ import { Stack } from "@mui/material";
 import Link from "next/link";
 const Contents = () => {
   return (
-    <div className="flex flex-col bg-black text-white">
+    <div className="flex flex-col bg-black text-white pb-4">
       <div className="flex justify-center items-center mt-6">
         <h1 className="text-3xl ">CONTENTS</h1>
       </div>
