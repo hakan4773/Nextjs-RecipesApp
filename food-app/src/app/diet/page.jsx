@@ -72,8 +72,8 @@ function valuetext(value) {
 }
  
   return (
-    <div className="min-w-[400px] font-sans bg-slate-100 lg:p-24 p-1 text-lg">
-        <Image src={diet} alt='diet' className='w-full h-72' width={700} height={100}></Image>
+    <div className="w-full font-sans bg-slate-100 lg:p-24 p-1 text-lg">
+        <Image src={diet} alt='diet' className='w-full h-72' width={600} height={100}></Image>
      
       <h1 className="text-3xl p-2 font-bold text-blue-900">Diyet Nedir?</h1>
       <p className="p-2">
