@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { useSelectedLayoutSegment } from 'next/navigation'
 
 
-const Header = ({children}) => {
+const Header = () => {
 
   const router=useRouter();
   const activeSegment = useSelectedLayoutSegment();
@@ -54,7 +54,7 @@ const handleClose = () => {
 </ul>
 
 
-<div  className='h-12 text-lg  p-2 flex flex-row lg:space-x-8 space-x-2 text-white justify-center items-center '>
+<div  className='h-12 text-lg  p-2 flex flex-row lg:space-x-8 space-x-4 text-white justify-center items-center '>
 
 <button   onMouseMove={handleClick} className='cursor-pointer'>Meals</button>
 <Menu open={open}  anchorEl={anchorEl} className='flex justify-center items-center' onClose={handleClose}>
