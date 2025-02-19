@@ -46,22 +46,22 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-[600px] gap-6 space-y-4 p-2 ">
+    <div className="flex flex-col min-h-[600px]  space-y-4 p-2 ">
       <FilterComponents foods={foods}  setCurrencies={setCurrencies} />
     
       {cuurencies?.map((fd) => (
         <div key={fd.id} className="w-full "> <h2 className="m-2 font-sans">
                 <b>{fd.name}</b>
+
               </h2>
 
-          <div className=" flex lg:flex-row flex-col ">
-            
+          <div className=" flex lg:flex-row flex-col lg:items-start gap-6 ">
               <img
               src={fd.image}
               alt="recipe"
               className="rounded-md p-2 lg:w-[300px] w-[500px] lg:h-[200px] h-[300px]"
             />        
-            <div className=" flex lg:flex-col flex-row space-y-2 lg:w-auto w-full ">
+            <div className=" flex lg:flex-col flex-row space-y-2 w-auto  ">
              
               <p className="font-sans m-2">
                 <b>Cousinie: </b>
