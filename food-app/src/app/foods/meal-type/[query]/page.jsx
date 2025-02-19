@@ -47,109 +47,119 @@ const Page = ({params}) => {
   };
 
   return (
-    <div className="flex flex-col min-h-[600px] gap-6 space-y-4 p-2 ">
+    <div className="flex flex-col min-h-[600px] min-w-[410px] gap-6 space-y-4 p-2 ">
       <FilterComponents foods={foods}  setCurrencies={setCurrencies} />
     
       {cuurencies?.map((fd) => (
-        <div key={fd.id} className="w-full ">
-          <div className=" flex lg:flex-row flex-col">
-            <img
-              src={fd.image}
-              alt="recipe"
-              className="rounded-md p-2 lg:w-[300px] w-[500px] lg:h-[200px] h-[300px]"
-            />        
-            <div className=" flex lg:flex-col flex-row">
-              <h2 className="m-2 font-sans">
-                <b>{fd.name}</b>
-              </h2>
-              <p className="font-sans m-2">
-                <b>Cousinie: </b>
-                {fd.cuisine} <TourIcon />
-              </p>
-              <p className="font-sans m-2">
-                <b>Meal Type: </b>
-                {fd.mealType+" "}
-              </p>
-              <p className="font-sans m-2">
-                <b>Prep Time Minutes: </b>
-                {fd.prepTimeMinutes} minute <AlarmIcon />
-              </p>
-              <p className="font-sans m-2">
-                <b>CookTimeMinutes: </b>
-                {fd.cookTimeMinutes} minute <AlarmIcon />
-              </p>
-            </div>
+        <div key={fd.id} className="w-full "> <h2 className="m-2 font-sans">
+        <b>{fd.name}</b>
 
-            <div  className="lg:mx-7 mx-0 flex lg:flex-col  flex-row">
-              <p className="font-sans m-2">
-                <b>Difficulty: </b>
-                {fd.difficulty}{" "}
-              </p>
+      </h2>
 
-              <p className="font-sans  pb-2 mx-3">
-                <b>Rating: </b>
-                {fd.rating}
-                <Rating
-                  name="half-rating"
-                  defaultValue={fd.rating}
-                  sx={{ padding: 1 }}
-                  precision={0.5}
-                />
-              </p>
-              <p className="font-sans m-2">
-                <b>Calories Per Serving: </b>
-                {fd.caloriesPerServing} Kcal
-              </p>
+  <div className=" flex lg:flex-row flex-col lg:items-start gap-6 ">
+      <img
+      src={fd.image}
+      alt="recipe"
+      className="rounded-md p-2 lg:w-[300px] w-[500px] lg:h-[200px] h-[300px]"
+    />        
+    <div className=" flex lg:flex-col flex-row space-y-2 w-auto  ">
+     
+      <p className="font-sans m-2">
+        <b>Cousinie: </b>
+        {fd.cuisine} <TourIcon />
+      </p>
+      <p className="font-sans m-2 ">
+        <b>Meal Type: </b>
+        {fd.mealType+" "}
+      </p>
+      <p className="font-sans m-2">
+        <b>Prep Time: </b>
+        {fd.prepTimeMinutes} minute <AlarmIcon />
+      </p>
+      <p className="font-sans ">
+        <b>Cook Time </b>
+        {fd.cookTimeMinutes} minute <AlarmIcon />
+      </p>
+    </div>
 
-            </div>
+    <div  className="lg:mx-7 mx-0 flex lg:flex-col  flex-row">
+      <p className="font-sans m-2">
+        <b>Difficulty: </b>
+        {fd.difficulty}{" "}
+      </p>
 
-            <div className="mx-auto space-y-6 flex flex-col ">
-            <Button variant="contained" color="primary" sx={{width:{xs  :500,md:350}}}   onClick={()=>router.push(`/foods/${fd?.id}`)}>More</Button>
-              <ReviewComponents />
-            </div>
+      <p className="font-sans  pb-2 mx-3">
+        <b>Rating: </b>
+        {fd.rating}
+        <Rating
+          name="half-rating"
+          defaultValue={fd.rating}
+          sx={{ padding: 1 }}
+          precision={0.5}
+        />
+      </p>
+      <p className="font-sans ">
+        <b>Calories Per Serving: </b>
+        {fd.caloriesPerServing} Kcal
+      </p>
 
-          </div>
-          <Accordion 
-            expanded={expanded === `panel1-${fd.id}`}
-            onChange={handleChange(`panel1-${fd.id}`)}
-            className="w-full"
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              sx={{ backgroundColor: "#dfb4b4" }}
-            >
-              <Typography component="span" >
-                <ContentPasteIcon /> Click to see the ingredients
-              </Typography>
-            </AccordionSummary>
-            {fd?.ingredients?.map((ing, index) => (
-              <AccordionDetails sx={{ height: 30 }} key={index}>
-                <li className="mx-4 font-serif ">{ing}</li>
-              </AccordionDetails>
-            ))}
-          </Accordion>
+    </div>
+<div className="lg:mx-auto  space-y-6 flex flex-col">
+    <Button variant="contained" color="primary" sx={{width:{xs  :"100%",md:350}}} 
+      onClick={()=>router.push(`/foods/${fd?.id}`)}>More</Button>
+      <ReviewComponents />
+    </div>
 
-          <Accordion 
-            expanded={expanded === `panel2-${fd.id}`}
-            onChange={handleChange(`panel2-${fd.id}`)}
-            className="w-full"
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              sx={{ backgroundColor: "#dfb4b4" }}
-            >
-              <Typography component="span" >
-                <OutdoorGrillIcon />
-                How to make
-              </Typography>
-            </AccordionSummary>
-            {fd.instructions.map((item,index) => (
-              <AccordionDetails key={index}>
-                <li className="mx-4 font-serif">{item}</li>
-              </AccordionDetails>
-            ))}
-          </Accordion>
-        </div>
+  </div>  
+
+
+
+<div>
+  <Accordion 
+    expanded={expanded === `panel1-${fd.id}`}
+    onChange={handleChange(`panel1-${fd.id}`)}
+    className="w-full"
+  >
+    <AccordionSummary
+      expandIcon={<ExpandMoreIcon />}
+      sx={{ backgroundColor: "#dfb4b4" }}
+    >
+      <Typography component="span" >
+        <ContentPasteIcon /> Click to see the ingredients
+      </Typography>
+    </AccordionSummary>
+    {fd?.ingredients?.map((ing, index) => (
+      <AccordionDetails sx={{ height: 30 }} key={index}>
+        <li className="mx-4 font-serif ">{ing}</li>
+      </AccordionDetails>
+    ))}
+  </Accordion>
+
+  <Accordion 
+    expanded={expanded === `panel2-${fd.id}`}
+    onChange={handleChange(`panel2-${fd.id}`)}
+    className="w-full"
+  >
+    <AccordionSummary
+      expandIcon={<ExpandMoreIcon />}
+      sx={{ backgroundColor: "#dfb4b4" }}
+    >
+      <Typography component="span" >
+        <OutdoorGrillIcon />
+        How to make
+      </Typography>
+    </AccordionSummary>
+    {fd.instructions.map((item,index) => (
+      <AccordionDetails key={index}>
+        <li className="mx-4 font-serif">{item}</li>
+      </AccordionDetails>
+    ))}
+  </Accordion>
+</div>
+
+  
+
+</div>
       ))}
     </div>
   );
