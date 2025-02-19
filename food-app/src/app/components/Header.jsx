@@ -43,7 +43,7 @@ const handleClose = () => {
   ]
 
   return (
-    <div className='flex flex-col  lg:h-20 h-32 p-2 bg-black w-full'>
+    <div className='flex flex-col  lg:h-20 h-32 p-2 bg-black w-full min-w-[420px]'>
         
 
 <ul className='text-white flex justify-center items-center text-xl text-center gap-6 w-full border-b'>
@@ -54,7 +54,7 @@ const handleClose = () => {
 </ul>
 
 
-<div  className='h-12 text-lg  p-2 flex flex-row lg:space-x-8 space-x-4 text-white justify-center items-center '>
+<div  className='h-12 text-lg  p-2 flex flex-row lg:space-x-8 space-x-2  text-white justify-center items-center '>
 
 <button   onMouseMove={handleClick} className='cursor-pointer'>Meals</button>
 <Menu open={open}  anchorEl={anchorEl} className='flex justify-center items-center' onClose={handleClose}>

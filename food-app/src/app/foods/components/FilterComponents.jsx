@@ -101,9 +101,10 @@ return false;
   };
  
   return(
-    <div className="flex    lg:flex-row flex-wrap gap-4 border-b-2  ">
-      <div className="flex lg:flex-row flex-wrap mx-10">
-        <FormControl sx={{ width: { xs: '100%', lg: '250px' }, padding: 1 }}>
+    <div className="flex    lg:flex-row flex-wrap gap-4   h-auto mt-2">
+   
+      <div className="flex lg:flex-row flex-wrap mx-10 col-span-3">
+        <FormControl sx={{ width: { xs: '100%',lg: '230px' }, padding: 1 }}  >
           <InputLabel id="demo-multiple-checkbox-label">Cuisine</InputLabel>
 
           <Select
@@ -120,7 +121,7 @@ return false;
           </Select>
         </FormControl>
 
-        <FormControl component="fieldset" sx={{ width: { xs: '100%', lg: '250px' }, padding: 1 }}>
+        <FormControl component="fieldset" sx={{ width: { xs: '100%',lg: '230px' }, padding: 1 }}>
           <InputLabel id="demo-multiple-checkbox-label">KCAL</InputLabel>
           <Select
             multiple
@@ -139,7 +140,7 @@ return false;
           </Select>
         </FormControl>
 
-        <FormControl component="fieldset" sx={{width: { xs: '100%', lg: '250px' }, padding: 1 }}>
+        <FormControl component="fieldset" sx={{width: { xs: '100%',lg: '230px'  }, padding: 1 }}>
           <InputLabel>Difficultly</InputLabel>
 
           <Select
@@ -185,7 +186,7 @@ return false;
         >
           <Button
             variant="contained"
-            className="lg:w-32 w-full h-12"
+            className="lg:w-32 w-full h-10"
             onClick={applyFilterSelect}
           >
             Filter
@@ -193,7 +194,7 @@ return false;
           <Button
             variant="contained"
             color="error"
-            className="lg:w-32 w-full h-12  "
+            className="lg:w-32 w-full h-10  "
             onClick={clearFilters}
           >
             Clear Filter
