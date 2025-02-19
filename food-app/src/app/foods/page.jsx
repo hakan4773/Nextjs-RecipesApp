@@ -46,7 +46,7 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-[600px]  space-y-4 p-2 ">
+    <div className="flex flex-col min-h-[600px] min-w-[410px]  space-y-4 p-2 ">
       <FilterComponents foods={foods}  setCurrencies={setCurrencies} />
     
       {cuurencies?.map((fd) => (

@@ -18,7 +18,7 @@ const page = () => {
     fetchdata();
   }, []);
   return (
-    <div className="font-serif w-full flex flex-col justify-center items-center relative lg:px-40 px-2 text-xl ">
+    <div className="font-serif w-full min-w-[410px] flex flex-col justify-center items-center relative lg:px-40 px-2 text-xl ">
      <h1 className="flex justify-center text-3xl p-4 font-bold">{food.name}</h1>  
      <img src={food.image} alt="recipe" className="lg:h-[60vh] h-[40vh] lg:w-full w-[500px] " />
  

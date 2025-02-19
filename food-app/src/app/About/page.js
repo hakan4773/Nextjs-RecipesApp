@@ -3,14 +3,14 @@ import React from 'react'
 import menu from "../photo-1498669374702-58e97ebbede3.avif"
 const Page = () => {
   return (
-    <div className='flex min-h-screen  relative opacity-100'>
+    <div className='flex min-h-screen  min-w-[410px] relative opacity-100'>
       <Image
               src={menu}
               alt="Next.js logo"
             fill
             />
            
-<div className=' absolute lg:w-[600px] h-full  p-12 space-y-8 shadow-xl lg:text-black text-white ' >
+<div className=' absolute lg:w-[700px]  h-full  p-12 space-y-8 shadow-xl lg:text-black text-white ' >
  <h1 className='absolute text-3xl '>WHO ARE US ?</h1> 
    <p className='lg:text-lg text-sm' >
  What is Lorem Ipsum?

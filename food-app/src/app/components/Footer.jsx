@@ -6,8 +6,8 @@ const Footer = () => {
 
 
   return (
-    <>
-    <div className="flex lg:flex-row flex-wrap bg-black text-white border-t p-4 gap-10   " >
+    
+    <div className="flex lg:flex-row flex-wrap min-w-[410px] bg-black text-white border-t p-4 gap-10   " >
     <div className="flex">
       <div className="flex flex-col p-2 mx-6">
         <h1 className="flex  text-xl underline font-bold">Links</h1>
@@ -55,12 +55,11 @@ const Footer = () => {
       </h1>
       </div>
 
-
-    </div>
-    <div className=" flex justify-center text-white bg-gray-800 ">
+  <div className=" flex justify-center items-center text-white border-t pt-2 w-full">
         Copyright © 2025 Recipesfree.net. All Rights Reserved
       </div>
-      </>
+    </div>
+  
   );
 };
 
